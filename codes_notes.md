@@ -1,9 +1,11 @@
+![codes](/codes.png)
+
 Using hex to text:
 53756231326669 = Sub12fi
 6e647468656b6579 = ndthekey
 537562313266696e647468656b6579 = Sub12findthekey
 
-
+```ruby
 irb(main):106:0> puts hex_to_text(codes["tree"].join)
 [r1B:1BJBH1r1wAA}zy1}vv1sAxy1r1AAu1~r1C1rYrv1r1^v1i~r1ru1r1YC1_D1jDr
 
@@ -39,6 +41,7 @@ irb(main):127:0> codes["fire"].map { |text| text_to_hex(text).scan(/.{1,2}/m).ma
 => ["1717161717", "161616171616", "1d4d4d4d161b", "4d161d3a1d161d174d"]
 irb(main):128:0> codes["fire"].map { |text| text_to_hex(text).scan(/.{1,2}/m).map { |n| hex_minus_int(n, 12) }.join }
 => ["1d1d1c1d1d", "1c1c1c1d1c1c", "235353531c21", "531c2340231c231d53"]
+```
 
 green:
 b
