@@ -34,6 +34,12 @@ irb(main):121:0> codes["tree"].map { |hex| hex_to_text(hex.scan(/.{1,2}/m).map {
 irb(main):122:0> codes["green"].map { |hex| hex_to_text(hex.scan(/.{1,2}/m).map { |n| hex_minus_hex(n, "12") }.join) }
 => ["\xD7", "`m", "\x1F0(", "!)-\x10", "6\x1F\x11", "V\"]P", "hrg\x1Fk\xDB", "VFf!]\xF0", "q/tfg\xDA", "AQ\x16r-\x11", "cx\x1Fle\xD3", "1gQb8W]\xB0", "\x1F`\x1FLf&&\x91\xD1\x10", "l`r\x1F`mc\x1F`\xDF", "8\"fi\x13\xE26qM\x80", "2\xDB", "\x16\xDF"]
 
+irb(main):127:0> codes["fire"].map { |text| text_to_hex(text).scan(/.{1,2}/m).map { |n| hex_minus_hex(n
+, "12") }.join }
+=> ["1717161717", "161616171616", "1d4d4d4d161b", "4d161d3a1d161d174d"]
+irb(main):128:0> codes["fire"].map { |text| text_to_hex(text).scan(/.{1,2}/m).map { |n| hex_minus_int(n, 12) }.join }
+=> ["1d1d1c1d1d", "1c1c1c1d1c1c", "235353531c21", "531c2340231c231d53"]
+
 green:
 b
 727f                        r
@@ -155,3 +161,27 @@ b688b1                    ���
 1c-9                      
 
 stuff after dashes: 9594b5b9259 -> ����%
+
+fire minus 0x12:
+1717161717
+161616171616
+1d4d4d4d161b        MMM
+4d161d3a1d161d174d  M:M
+
+fire minus 12:
+1d1d1c1d1d
+1c1c1c1d1c1c
+235353531c21        #SSS!
+531c2340231c231d53  S#@##S
+
+fire with spaces minus 0x12:
+17e17e16e17e17        �~�~
+e16e16e16171616       �n�aqa
+1d4d4d4d161b          MMM
+4d161d3a1d161d174d    M:M
+
+fire with spaces minus 12:
+1d141d141c141d141d
+141c141c141c1d1c1c
+235353531c21          #SSS!
+531c2340231c231d53    S#@##S
