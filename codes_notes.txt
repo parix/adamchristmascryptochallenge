@@ -34,6 +34,24 @@ irb(main):121:0> codes["tree"].map { |hex| hex_to_text(hex.scan(/.{1,2}/m).map {
 irb(main):122:0> codes["green"].map { |hex| hex_to_text(hex.scan(/.{1,2}/m).map { |n| hex_minus_hex(n, "12") }.join) }
 => ["\xD7", "`m", "\x1F0(", "!)-\x10", "6\x1F\x11", "V\"]P", "hrg\x1Fk\xDB", "VFf!]\xF0", "q/tfg\xDA", "AQ\x16r-\x11", "cx\x1Fle\xD3", "1gQb8W]\xB0", "\x1F`\x1FLf&&\x91\xD1\x10", "l`r\x1F`mc\x1F`\xDF", "8\"fi\x13\xE26qM\x80", "2\xDB", "\x16\xDF"]
 
+green:
+b
+727f                        r
+31423a                      1B:
+1424a42                     $�
+483123                      H1#
+17741417d                   t
+7a8479317d7                 z�y1}
+68587833173                 hXx3
+83418678798                 �A�xy
+5317231884141               S#�
+758a317e77f                 u�1~w
+431887283597877             C�(5��
+3172315e783838a31           1r1^x88�
+7e728431727f7531723         ~r�1u1r
+1594381818a315f4488316a     �8��H�
+447                         D
+283                         (
 
 green sub 0x12:
 -7                      
@@ -62,7 +80,7 @@ green sub 12:
 25362e                    %6.
 81898-a                   ���
 3c2517                    <%
-b688b1                    b688b1
+b688b1                    ���
 6e786d2571-5              nxm%q
 5c4c6c27b-9               \Ll'�
 77357a6c6d-4              w5zlm
@@ -76,6 +94,25 @@ b688b1                    b688b1
 1c-9
 
 stuff after dashes: 1a594b5b9259 -> YK[�Y
+
+tree:
+5b                          [
+727f                        r
+31423a                      31423a
+31424a42                    1B:
+4831723                     H1r
+17741417d                   t
+7a8479317d7                 z�y1}
+6858576833173               hXWh3
+83418678798                 �A�xy
+5317231884141               S#�
+758a317e727f31              u�1~1
+43318872835972877           C1�r�Yr�
+63172315e7683838a31         c#�h88�
+697e728431727f7531723       i~r�1u1r
+1594381818a315f4488316a     �8��H�
+447                         D
+283                         (
 
 tree sub 0x12:
 49                        I
